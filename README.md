@@ -15,4 +15,4 @@
 
 我相信Github，哈哈
 
-![image-20200708164142283](C:\Users\1\AppData\Roaming\Typora\typora-user-images\image-20200708164142283.png)
+![image-20200708164142283](http://github.com/duan1998/Study-Note/raw/master/images/image-20200708164142283.jpg)
