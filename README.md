@@ -15,4 +15,8 @@
 
 我相信Github，哈哈
 
+
+
+斜体部分：自己未完全掌握
+
 ![image](https://github.com/duan1998/Study-Note/blob/master/Images/image-20200708164142283.png)
