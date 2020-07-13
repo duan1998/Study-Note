@@ -292,3 +292,54 @@ end
 ```
 
 ### 迭代器
+
+##### 描述
+
+可以遍历一种集合所有元素的机制，使用函数实现
+
+##### 迭代器函数
+
+有状态的迭代器<状态使用闭包保存>
+
+考虑到遍历“集合”中的元素，需要**保存**一些信息，比如当前枚举index，以及枚举次数count，这里考虑使用Lua提供的闭包`closure`机制进行保存
+
+##### 函数示例
+
+```lua
+function elementIterator (collection)
+   local index = 0
+   local count = #collection
+   -- 闭包函数
+   return function ()
+      index = index + 1
+      if index <= count
+      then
+         --  返回迭代器的当前元素
+         return collection[index]
+      end
+   end
+end
+```
+
+##### 泛型for
+
+###### 语法
+
+```lua
+for <var-list> in <exp-list> do  --<var-list>是一个或多个变量名的列表如k,v  <exp-list>是一个或多个表达式的列表
+     <body>  
+end
+```
+
+###### 说明
+
+for做的第一件事就是对in后面的表达式求值，这些表达式应该返回3个值供for保存：**迭代器函数**、**恒定状态**和**控制变量**的初值
+
+如果表达式返回的结果个数不足三个会自动用nil补足，多出部分被忽略
+
+如果返回的第一个值为nil循环结束
+
+##### 常用的迭代器函数
+
+
+
