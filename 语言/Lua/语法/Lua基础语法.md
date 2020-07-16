@@ -1,4 +1,4 @@
-# Lua基础语法
+# luaLua基础语法
 
 ### 注释
 
@@ -339,7 +339,25 @@ for做的第一件事就是对in后面的表达式求值，这些表达式应该
 
 如果返回的第一个值为nil循环结束
 
-##### 常用的迭代器函数
+### Table
+
+##### 常用方法
+
+table.concat (table [,` sep` [, `start` [, `end`]]])
+
+> table.concat()函数列出参数中指定table的数组部分从start位置到end位置的所有元素, 元素间以指定的分隔符(sep)隔开
+
+table.insert (table, [`pos`,] `value`)
+
+> 在table的数组部分指定位置(pos)插入值为value的一个元素. pos参数可选, 默认为数组部分末尾.
+
+table.remove (table [, `pos`])
+
+> 返回table数组部分位于pos位置的元素. 其后的元素会被前移. pos参数可选, 默认为table长度, 即从最后一个元素删起。
+
+table.sort (table [, `comp`])
+
+> 对给定的table进行升序排序。
 
 
 
